@@ -9,8 +9,8 @@ public class Main {
         System.out.println("Given array is:");
         printArray(array);
 
-        MergeSort mergeSort = new MergeSort();
-        mergeSort.sort(array, 0, array.length - 1);
+        MergeSortInteger mergeSortInteger = new MergeSortInteger();
+        mergeSortInteger.sort(array, 0, array.length - 1);
 
         System.out.println("\nSorted array is:");
         printArray(array);

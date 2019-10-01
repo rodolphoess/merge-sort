@@ -1,6 +1,6 @@
 package main;
 
-public class MergeSort {
+public class MergeSortInteger {
 
     public void sort(int[] array, int indiceInicio, int indiceFim) {
         if (indiceInicio < indiceFim) {
