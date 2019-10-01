@@ -1,6 +1,7 @@
 package main;
 
 import java.time.LocalDate;
+import java.util.Arrays;
 
 public class Main {
 
@@ -9,6 +10,35 @@ public class Main {
         ordenarInteiros();
 
         ordenarLocalDates();
+
+        ordenarStrings();
+    }
+
+    private static void ordenarStrings() {
+        String[] array = {
+                "Aaa",
+                "Files",
+                "Commits",
+                "Branches",
+                "Tags",
+                "Contributors",
+                "Graph",
+                "Compare",
+                "Charts",
+                "Issues"
+        };
+
+        System.out.println("___________________________");
+        System.out.println("\nGiven string array is:");
+        printArray(array);
+
+        Arrays.sort(array);
+
+        System.out.println("\nSorted A to Z string array is:");
+        printArray(array);
+
+        System.out.println("\nSorted Z to A string array is:");
+        printInverseArray(array);
     }
 
     private static void ordenarLocalDates() {
@@ -51,6 +81,12 @@ public class Main {
 
     private static void printArray(Object[] array) {
         for (int i = 0; i < array.length; ++i)
+            System.out.print(array[i] + " ");
+        System.out.println();
+    }
+
+    private static void printInverseArray(String[] array) {
+        for (int i = array.length - 1; i >= 0; --i)
             System.out.print(array[i] + " ");
         System.out.println();
     }
