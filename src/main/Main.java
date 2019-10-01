@@ -1,22 +1,55 @@
 package main;
 
+import java.time.LocalDate;
+
 public class Main {
 
     public static void main(String[] args) {
 
-        int[] array = {12, 11, 13, 5, 6, 7, 1, 0, 99, 101};
+        ordenarInteiros();
 
-        System.out.println("Given array is:");
+        ordenarLocalDates();
+    }
+
+    private static void ordenarLocalDates() {
+        LocalDate[] array = {
+                LocalDate.now(),
+                LocalDate.of(1990, 12, 17),
+                LocalDate.of(1995, 3, 16),
+                LocalDate.of(1991, 12, 17),
+                LocalDate.of(2001, 9, 4),
+                LocalDate.of(2008, 6, 27),
+                LocalDate.of(2016, 7, 2),
+                LocalDate.of(2009, 12, 1),
+                LocalDate.of(1962, 12, 31),
+                LocalDate.of(2005, 6, 28)
+        };
+
+        System.out.println("___________________________");
+        System.out.println("\nGiven localdate array is:");
+        printArray(array);
+
+        MergeSortDate mergeSortDate = new MergeSortDate();
+        mergeSortDate.sort(array, 0, array.length - 1);
+
+        System.out.println("\nSorted localdate array is:");
+        printArray(array);
+    }
+
+    private static void ordenarInteiros() {
+        Integer[] array = {12, 11, 13, 5, 6, 7, 1, 0, 99, 101};
+
+        System.out.println("Given integer array is:");
         printArray(array);
 
         MergeSortInteger mergeSortInteger = new MergeSortInteger();
         mergeSortInteger.sort(array, 0, array.length - 1);
 
-        System.out.println("\nSorted array is:");
+        System.out.println("\nSorted integer array is:");
         printArray(array);
     }
 
-    private static void printArray(int[] array) {
+    private static void printArray(Object[] array) {
         for (int i = 0; i < array.length; ++i)
             System.out.print(array[i] + " ");
         System.out.println();

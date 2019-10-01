@@ -2,7 +2,7 @@ package main;
 
 public class MergeSortInteger {
 
-    public void sort(int[] array, int indiceInicio, int indiceFim) {
+    public void sort(Integer[] array, int indiceInicio, int indiceFim) {
         if (indiceInicio < indiceFim) {
             int indiceMedio = (indiceInicio + indiceFim) / 2;
 
@@ -13,13 +13,13 @@ public class MergeSortInteger {
         }
     }
 
-    private void merge(int[] array, int indiceInicio, int indiceMedio, int indiceFim) {
+    private void merge(Integer[] array, int indiceInicio, int indiceMedio, int indiceFim) {
 
         int tamanhoArrayEsquerda = indiceMedio - indiceInicio + 1;
         int tamanhoArrayDireita = indiceFim - indiceMedio;
 
-        int[] arrayTempEsquerda = new int[tamanhoArrayEsquerda];
-        int[] arrayTempDireita = new int[tamanhoArrayDireita];
+        Integer[] arrayTempEsquerda = new Integer[tamanhoArrayEsquerda];
+        Integer[] arrayTempDireita = new Integer[tamanhoArrayDireita];
 
         for (int i = 0; i < tamanhoArrayEsquerda; i++) {
             arrayTempEsquerda[i] = array[indiceInicio + i];
