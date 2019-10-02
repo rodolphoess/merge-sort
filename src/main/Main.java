@@ -28,7 +28,7 @@ public class Main {
                 "Issues"
         };
 
-        System.out.println("___________________________");
+        System.out.println("\n___________________________");
         System.out.println("\nGiven string array is:");
         printArray(array);
 
@@ -55,7 +55,7 @@ public class Main {
                 LocalDate.of(2005, 6, 28)
         };
 
-        System.out.println("___________________________");
+        System.out.println("\n___________________________");
         System.out.println("\nGiven localdate array is:");
         printArray(array);
 

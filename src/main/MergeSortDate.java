@@ -22,14 +22,13 @@ public class MergeSortDate {
         LocalDate[] arrayTempEsquerda = new LocalDate[tamanhoArrayEsquerda];
         LocalDate[] arrayTempDireita = new LocalDate[tamanhoArrayDireita];
 
-        for (int i = 0; i < tamanhoArrayEsquerda; i++) {
-            arrayTempEsquerda[i] = array[indiceInicio + i];
-        }
+        System.arraycopy(array, indiceInicio, arrayTempEsquerda, 0, tamanhoArrayEsquerda);
         for (int j = 0; j < tamanhoArrayDireita; j++) {
             arrayTempDireita[j] = array[indiceMedio + 1 + j];
         }
 
-        int i = 0, j = 0;
+        int i = 0;
+        int j = 0;
         int k = indiceInicio;
         while (i < tamanhoArrayEsquerda && j < tamanhoArrayDireita) {
             if (arrayTempEsquerda[i].isBefore(arrayTempDireita[j]) || arrayTempEsquerda[i].isEqual(arrayTempDireita[j])) {
